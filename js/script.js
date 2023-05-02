@@ -58,9 +58,9 @@ var startPlayer = {
 	totalClicks: 0,
 	totalManualClicks: 0,
 	totalTicks: 0,
-	proofsToNextCurr: 100000000000000,
+	proofsToNextCurr: 100000000,
 	proofsToCurrTracker: 0,
-	mathematiciansToNextCurr: 7000000000,
+	mathematiciansToNextCurr: 7000000,
 	mathematiciansToNextCurrTracker: 0,
 	resetCurrTracker: 0, //this variable does have to be reset
 	
@@ -246,8 +246,8 @@ function ifMoreDerivs(tier){
 function reset(tier) {
 	var index = tier - 1;
 	
-	if(player.buildings[4 + 5 * index].owned < 7000000000){
-		alert("You must have 7 billion mathematicians of tier " + tier + " to do this!")
+	if(player.buildings[4 + 5 * index].owned < 700000){
+		alert("You must have 7 hundred thousand mathematicians of tier " + tier + " to do this!")
 	}
 	else{
 		var confirmationText = "Are you sure you want to reset? You will gain: \n";
@@ -281,11 +281,11 @@ function reset(tier) {
 				money: 0,
 				moneyPerSecond: 0,
 				netMoneyPerSecond: 0,
-				moneyPerClick: 1,
+				moneyPerClick: 4,
 				moneyPerAutoclick: 0,
 				proofs: 0,
 				proofsPerSecond: 0,
-				costPerProof: 5,
+				costPerProof: 3,
 				deriv1Money: 0.05,
 				buildings: [new Building(1.1, 0.1, 0), new Building(1.1, 25000, 0), new Building(1.3, 0, 2), new Building(1.1, 5, 0), new Building(1.05, 1000, 0),
 							 new Building(1.2, 500, 0), new Building(1.3, 20000000, 0), new Building(1.8, 0, 20000), new Building(1.2, 1000, 0), new Building(1.2, 100000000, 0),
