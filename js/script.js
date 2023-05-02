@@ -133,7 +133,7 @@ function displayNum(num, ifMoney){
 //function that recalculates the multipliers associated with upgrades
 function calcMult(mult){
 	var index = mult - 1;
-	calcMult.factors = [0.05, 0.2, 0.5, 1, 2, 4, 6];
+	calcMult.factors = [5, 20, 50, 100, 200, 400, 600];
 	var totalBuildings = 0;
 	
 	for(var i = mult*5 - 5; i < mult*5; i++){
@@ -676,14 +676,14 @@ var update = function(){
 		//does stuff every ten ticks
 		while(update.count >= 1){
 			inventoryAdder();
-			update.count -= 10;
+			update.count -= 1;
 		}
 	
 		//does stuff every 60 ticks
 		while(update.count2 >= 1){
 			save();
 			moneyButtonClick(player.upgrades[0]);
-			update.count2 -= 60;
+			update.count2 -= 6;
 		}
 		
 		//checks if enough proofs/mathematicians for reset currency: if so, adds reset currency
