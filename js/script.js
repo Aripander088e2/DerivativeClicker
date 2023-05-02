@@ -676,14 +676,14 @@ var update = function(){
 		//does stuff every ten ticks
 		while(update.count >= 1){
 			inventoryAdder();
-			update.count -= 1;
+			update.count -= 0.3;
 		}
 	
 		//does stuff every 60 ticks
 		while(update.count2 >= 1){
 			save();
 			moneyButtonClick(player.upgrades[0]);
-			update.count2 -= 6;
+			update.count2 -= 1;
 		}
 		
 		//checks if enough proofs/mathematicians for reset currency: if so, adds reset currency
