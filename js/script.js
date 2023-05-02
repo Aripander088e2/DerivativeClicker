@@ -13,7 +13,7 @@ var startPlayer = {
 	proofs: 0,
 	proofsPerSecond: 0,
 	costPerProof: 5,
-	deriv1Money: 0.05,
+	deriv1Money: 0.65,
 	
 	/* main buildings: indexes
 	0: deriv1, 1: combinatorics, 2: computer, 3: high schooler, 4: mathematician
@@ -296,7 +296,7 @@ function reset(tier) {
 							 new Building(2.7, 1000000000000, 1000000000), new Building(4, 500000000000000000, 0), new Building(8, 0, 10000000000000), new Building(3.7, 1000000000000000, 0), new Building(4, 1000000000000000000000000000, 0)],
 				tierUpgrades: [0, 0, 0, 0, 0, 0, 0],
 				upgrades: [0, 0],
-				tierUpgradeCosts: [1000000, 1000000000, 1000000000000, 1000000000000000, 1000000000000000000, 1000000000000000000000, 1000000000000000000000000],
+				tierUpgradeCosts: [1000, 1000000, 1000000000, 100000000000, 1000000000000, 100000000000000, 10000000000000000],
 				upgradeCosts: [100000, 10],
 				mult: [1, 1, 1, 1, 1, 1, 1],
 				clickTracker: 0,
@@ -674,13 +674,13 @@ var update = function(){
 		else addProofs(player.money / player.costPerProof);
 		
 		//does stuff every ten ticks
-		while(update.count >= 10){
+		while(update.count >= 1){
 			inventoryAdder();
 			update.count -= 10;
 		}
 	
 		//does stuff every 60 ticks
-		while(update.count2 >= 60){
+		while(update.count2 >= 1){
 			save();
 			moneyButtonClick(player.upgrades[0]);
 			update.count2 -= 60;
