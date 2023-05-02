@@ -676,7 +676,7 @@ var update = function(){
 		//does stuff every ten ticks
 		while(update.count >= 1){
 			inventoryAdder();
-			update.count -= 0.3;
+			update.count -= 0.25;
 		}
 	
 		//does stuff every 60 ticks
