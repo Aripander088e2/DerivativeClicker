@@ -38,8 +38,8 @@ var startPlayer = {
 	*/	
 	tierUpgrades: [0, 0, 0, 0, 0, 0, 0],
 	upgrades: [0, 0],
-	tierUpgradeCosts: [1000000, 1000000000, 1000000000000, 1000000000000000, 1000000000000000000, 1000000000000000000000, 1000000000000000000000000],
-	upgradeCosts: [100000, 10],
+	tierUpgradeCosts: [1000, 1000000, 1000000000, 100000000000, 1000000000000, 100000000000000, 10000000000000000],
+	upgradeCosts: [10000, 10],
 	
 	//upgrade multipliers
 	mult: [1, 1, 1, 1, 1, 1, 1],
@@ -133,7 +133,7 @@ function displayNum(num, ifMoney){
 //function that recalculates the multipliers associated with upgrades
 function calcMult(mult){
 	var index = mult - 1;
-	calcMult.factors = [0.0005, 0.002, 0.005, 0.01, 0.02, 0.04, 0.06];
+	calcMult.factors = [0.05, 0.2, 0.5, 1, 2, 4, 6];
 	var totalBuildings = 0;
 	
 	for(var i = mult*5 - 5; i < mult*5; i++){
